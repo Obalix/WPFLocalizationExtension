@@ -39,6 +39,12 @@
   </Choose>
 
   <ItemGroup>
+    <Compile Remove="WPFLocalizeExtension.netcore3.0\**" />
+    <EmbeddedResource Remove="WPFLocalizeExtension.netcore3.0\**" />
+    <None Remove="WPFLocalizeExtension.netcore3.0\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="XAMLMarkupExtensions" Version="1.5.1" />
   </ItemGroup>
 

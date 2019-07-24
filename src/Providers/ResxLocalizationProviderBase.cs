@@ -14,17 +14,17 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Management;
 using System.Reflection;
 using System.Resources;
 using System.Windows;
-using System.Management;
 
 namespace WPFLocalizeExtension.Providers
 {
-    /// <summary>
-    /// The base for RESX file providers.
-    /// </summary>
-    public abstract class ResxLocalizationProviderBase : DependencyObject, ILocalizationProvider
+	/// <summary>
+	/// The base for RESX file providers.
+	/// </summary>
+	public abstract class ResxLocalizationProviderBase : DependencyObject, ILocalizationProvider
     {
         #region Variables
         /// <summary>

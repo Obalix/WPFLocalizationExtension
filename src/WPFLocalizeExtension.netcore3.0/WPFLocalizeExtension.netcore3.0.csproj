@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>WPFLocalizationExtension</RootNamespace>
+    <UseWPF>true</UseWPF>
+
+    <AssemblyName>WPFLocalizeExtension.NetCore3.0</AssemblyName>
+    <AssemblyTitle>WPFLocalizeExtension.NetCore3.0</AssemblyTitle>
+
+    <!--<Version>$(GitVersion_NuGetVersion)</Version>-->
+    <Version>3.4.0-dev</Version>
+    
+    <Authors>Bernhard Millauer,Uwe Mayer,Axel Eckenberger</Authors>
+    <PackageLicenseUrl>https://github.com/XAMLMarkupExtensions/WPFLocalizationExtension/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Obalix/WPFLocalizationExtension/</PackageProjectUrl>
+    <Copyright>Bernhard Millauer, Uwe Mayer, Axel Eckenberger</Copyright>
+    <Description>LocalizationExtension is a really easy way to localize any type of DependencyProperties or native Properties on DependencyObjects</Description>
+    <Company />
+    <Product>WPF Localization Extension (.NET Core 3.0)</Product>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageTags>wpf localization extension globalization resx csv resource language</PackageTags>
+    <RepositoryUrl>https://github.com/Obalix/WPFLocalizationExtension.git</RepositoryUrl>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>3.4.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\app.config" />
+    <Compile Include="..\Engine\EnumComboBox.cs" Link="Engine\EnumComboBox.cs" />
+    <Compile Include="..\Engine\EnumRun.cs" Link="Engine\EnumRun.cs" />
+    <Compile Include="..\Engine\GapTextControl.cs" Link="Engine\GapTextControl.cs" />
+    <Compile Include="..\Engine\IDictionaryEventListener.cs" Link="Engine\IDictionaryEventListener.cs" />
+    <Compile Include="..\Engine\LocalizeDictionary.cs" Link="Engine\LocalizeDictionary.cs" />
+    <Compile Include="..\Engine\LocBinding.cs" Link="Engine\LocBinding.cs" />
+    <Compile Include="..\Engine\LocProxy.cs" Link="Engine\LocProxy.cs" />
+    <Compile Include="..\Engine\MissingKeyEventArgs.cs" Link="Engine\MissingKeyEventArgs.cs" />
+    <Compile Include="..\Engine\ObjectDependencyManager.cs" Link="Engine\ObjectDependencyManager.cs" />
+    <Compile Include="..\Engine\ParentNotifiers.cs" Link="Engine\ParentNotifiers.cs" />
+    <Compile Include="..\Engine\SafeTargetInfo.cs" Link="Engine\SafeTargetInfo.cs" />
+    <Compile Include="..\Engine\TypedWeakReference.cs" Link="Engine\TypedWeakReference.cs" />
+    <Compile Include="..\Extensions\BLoc.cs" Link="Extensions\BLoc.cs" />
+    <Compile Include="..\Extensions\Compatibility.cs" Link="Extensions\Compatibility.cs" />
+    <Compile Include="..\Extensions\FELoc.cs" Link="Extensions\FELoc.cs" />
+    <Compile Include="..\Extensions\LocExtension.cs" Link="Extensions\LocExtension.cs" />
+    <Compile Include="..\Providers\CSVEmbeddedLocalizationProvider.cs" Link="Providers\CSVEmbeddedLocalizationProvider.cs" />
+    <Compile Include="..\Providers\CSVLocalizationProvider.cs" Link="Providers\CSVLocalizationProvider.cs" />
+    <Compile Include="..\Providers\CSVLocalizationProviderBase.cs" Link="Providers\CSVLocalizationProviderBase.cs" />
+    <Compile Include="..\Providers\FQAssemblyDictionaryKey.cs" Link="Providers\FQAssemblyDictionaryKey.cs" />
+    <Compile Include="..\Providers\FullyQualifiedResourceKeyBase.cs" Link="Providers\FullyQualifiedResourceKeyBase.cs" />
+    <Compile Include="..\Providers\ILocalizationProvider.cs" Link="Providers\ILocalizationProvider.cs" />
+    <Compile Include="..\Providers\InheritingResxLocalizationProvider.cs" Link="Providers\InheritingResxLocalizationProvider.cs" />
+    <Compile Include="..\Providers\ParentChangedNotifierHelper.cs" Link="Providers\ParentChangedNotifierHelper.cs" />
+    <Compile Include="..\Providers\ProviderEventArgs.cs" Link="Providers\ProviderEventArgs.cs" />
+    <Compile Include="..\Providers\ResxLocalizationProvider.cs" Link="Providers\ResxLocalizationProvider.cs" />
+    <Compile Include="..\Providers\ResxLocalizationProviderBase.cs" Link="Providers\ResxLocalizationProviderBase.cs" />
+    <Compile Include="..\TypeConverters\BitmapSourceTypeConverter.cs" Link="TypeConverters\BitmapSourceTypeConverter.cs" />
+    <Compile Include="..\TypeConverters\DefaultConverter.cs" Link="TypeConverters\DefaultConverter.cs" />
+    <Compile Include="..\TypeConverters\RegisterMissingTypeConverters.cs" Link="TypeConverters\RegisterMissingTypeConverters.cs" />
+    <Compile Include="..\TypeConverters\ThicknessConverter.cs" Link="TypeConverters\ThicknessConverter.cs" />
+    <None Include="..\Themes\Generic.xaml" Link="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--
+    <PackageReference Include="GitVersionTask" Version="4.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    -->
+    <PackageReference Include="System.Management" Version="4.5.0" />
+    <PackageReference Include="XAMLMarkupExtensions.NetCore3.0" Version="1.6.0" />
+  </ItemGroup>
+</Project>
